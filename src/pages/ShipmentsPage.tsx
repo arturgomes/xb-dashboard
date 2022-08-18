@@ -48,9 +48,14 @@ const COLUMNS: GridColDef[] = [
 ]
 
 const useStyles = makeStyles({
+    wrap:{
+        height: '100%',
+        paddingBottom: '10px',
+        display: 'flex',
+
+    },
     grid: {
         marginInline: 16,
-        height: '100%'
     },
     loader: {
         margin: 'auto',
@@ -74,22 +79,20 @@ export const ShipmentsPage: React.FC = () => {
     useEffect(() => {
         fetchShipments().then(result => setFetchShipmentsResult(result))
     }, [])
-
     let component: ReactElement
     switch (fetchShipmentsResult.status) {
         case 'SUCCESS':
-            component = <DataGrid
+            component = <div className={classes.wrap}><DataGrid
                 className={classes.grid}
                 rows={fetchShipmentsResult.shipments}
                 columns={COLUMNS}
                 autoPageSize={true}
-                disableSelectionOnClick
-            />
+            /></div>
             break;
         case 'LOADING':
-            component = <Box className={classes.loader}>
-                <Loader type="Grid" color={theme.palette.primary.main} />
-            </Box >
+            component = (<Box className={classes.loader}>
+                            <Loader type="Grid" color={theme.palette.primary.main} />
+                        </Box >)
             break
         case 'ERROR':
             component = <p>Error</p>
