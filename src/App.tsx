@@ -10,9 +10,26 @@ import { ShipmentsPage } from './pages/ShipmentsPage';
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#2AC3AD'
+      main: '#71C879',
+    },
+    secondary: {
+      main: '#D91C5C'
     }
-  }
+  },
+  typography: {
+    subtitle1: {
+      fontSize: 18,
+      lineHeight: '22px',
+      fontWeight: 'bold',
+
+    },
+    h4: {
+      fontSize: 24,
+      fontWeight: 'bold',
+      marginTop: '10px'
+    }
+
+  },
 })
 
 export const App = () => {

@@ -48,11 +48,10 @@ const COLUMNS: GridColDef[] = [
 ]
 
 const useStyles = makeStyles({
-    wrap:{
+    wrap: {
         height: '100%',
         paddingBottom: '10px',
         display: 'flex',
-
     },
     grid: {
         marginInline: 16,
@@ -91,8 +90,8 @@ export const ShipmentsPage: React.FC = () => {
             break;
         case 'LOADING':
             component = (<Box className={classes.loader}>
-                            <Loader type="Grid" color={theme.palette.primary.main} />
-                        </Box >)
+                <Loader type="Grid" color={theme.palette.primary.main} />
+            </Box >)
             break
         case 'ERROR':
             component = <p>Error</p>

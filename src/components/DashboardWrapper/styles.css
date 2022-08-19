@@ -1,0 +1,20 @@
+.dashboard_wrapper{
+  background-color: #eaeaea48;
+  padding:20px;
+  display:flex;
+  flex-direction: row;
+  gap:15px;
+}
+.dashboard_col {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width:100%;
+  gap: 15px;
+}
+
+@media screen and (max-width: 992px) {
+  .dashboard_wrapper {
+    flex-direction: column;
+  }
+}
