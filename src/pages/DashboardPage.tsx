@@ -4,7 +4,6 @@ import { Box, makeStyles, useTheme } from "@material-ui/core"
 
 import Loader from 'react-loader-spinner'
 import { fetchShipments, FetchShipmentsResult } from "../data/fetch-shipments"
-import './styles.css'
 import { DashboardWrapper } from "../components/DashboardWrapper";
 
 const useStyles = makeStyles({

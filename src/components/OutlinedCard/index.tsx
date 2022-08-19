@@ -27,6 +27,7 @@ const OutlinedCard = (props: Shipment) => {
           <Typography >Origin: {props.origin} </Typography>
           <Typography >Destination: {props.destination}</Typography>
           <Typography >Departed: {props.estimatedDeparture}</Typography>
+          <Typography >Mode: {props.mode}</Typography>
         </div>
       </CardContent>
 
